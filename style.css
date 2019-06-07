@@ -1,0 +1,131 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Verdana';
+	box-sizing: border-box;
+	color: #556f9b;
+}
+
+/** {
+	outline: 1px solid red;
+}*/
+
+/*------NAV-----*/
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.8rem;
+	padding: 25px 0;
+	position: fixed;
+	background-color: #fff;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0
+	z-index: 10;
+}
+
+.brand, .nav-links {
+	display: flex;
+	align-items: center;
+}
+
+.brand {
+	margin-left: 6%;
+}
+
+.logo {
+	max-width: 70px;
+	max-height: 45px;
+	margin-right: 25px;
+}
+
+.nav-links {
+	margin-right: 6%;
+}
+
+.nav-links .link {
+	text-transform: uppercase;
+	margin-right: 20px;
+}
+
+/*-----HEADER-----*/
+
+header {
+	margin-top: 92px;
+	background-image: url(img/canada.jpeg);
+	background-position: center;
+	background-size: cover;
+	padding-top: 7%;
+	padding-bottom: 25%;
+}
+
+.header-info {
+	color: #fff;
+	font-size: 1.45rem;
+	width: 24%;
+	margin-left: 10%;
+}
+
+header p {
+	position: relative;
+	margin: 0;
+	background-color: rgba(0,0,0,0.6);
+	padding: 20px 25px;
+}
+
+/*-----MAIN-----*/
+
+main {
+	display: flex;
+
+}
+
+.col {
+	flex-basis: 33.33%;
+	padding-top: 50px;
+}
+
+.col p {
+	width: 65%;
+	font-size: 1.25rem;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.col img {
+	display: block;
+	margin: 0 auto;
+}
+
+.col-3 img {
+	width: 280px;
+	height: 155px;
+}
+
+.col-3 img, .col-3 h3, .col-3 p {
+	position: relative;
+	top: -8px;
+}
+
+.col-2 img, .col-2 h3, .col-2 p {
+	position: relative;
+	top: 30px;
+}
+
+.col-1 {
+	margin-left: 7%;
+}
+
+.col-3 {
+	margin-right: 7%;
+}
+
+h3 {
+	text-align: center;
+}
