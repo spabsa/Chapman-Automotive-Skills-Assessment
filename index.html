@@ -31,7 +31,7 @@
 
 			<h3>Some Header</h3>
 
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo tempore quia enim quod, perferendis illum quae id, natus dolores temporibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, rem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus tenetur mollitia officiis laudantium dolore ipsa.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo tempore quia enim quod, perferendis illum quae id, natus dolores temporibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, rem. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 		</div>
 
 		<div class="col col-2">
@@ -39,7 +39,7 @@
 
 			<h3>More Stuff</h3>
 
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo tempore quia enim quod, perferendis illum quae id, natus dolores temporibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, neque. Corporis quisquam eligendi libero omnis.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo tempore quia enim quod, perferendis illum quae id, natus dolores temporibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 		</div>
 
 		<div class="col col-3">
@@ -47,30 +47,44 @@
 
 			<h3>Last Column</h3>
 
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo tempore quia enim quod, perferendis illum quae id, natus dolores temporibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, ipsa. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quae, nihil error delectus voluptatum deserunt.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo tempore quia enim quod, perferendis illum quae id, natus dolores temporibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, ipsa. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 		</div>
 	</main>
-	<footer>
+	<footer id="footer">
 		<div class="internal-links">
-			<h3>Internal Links</h3>
+			<h4>Internal Links</h4>
 
 			<div class="links">
-				<a href="#">Page One</a>
-				<a href="#">Another Page</a>
-				<a href="#">Sales Page</a>
-				<a href="#">Page Three</a>
-				<a href="#">Keep Going</a>
-				<a href="#">Last One</a>
-				<a href="#">Just Kidding</a>
+				<div>Page One</div>
+				<div>Another Page</div>
+				<div>Sales Page</div>
+				<div>Page Three</div>
+				<div>Keep Going</div>
+				<div>Last One</div>
+				<div>Just Kidding</div>
 			</div>
 		</div>
 
-		<div class="form">
-			<label for="Name">Name<input type="text" id="Name"></label>
-			<label for="Name">Address<input type="text" id="Address"></label>
-			<label for="Name">City<input type="text" id="City"></label>
+		<div class="form-wrap">
+			<form>
+				<label for="Name">Name</label>
+				<input type="text" class="name" required>
+				<label for="Name">Address</label>
+				<input type="text" class="address" required>
+				<label for="Name">City</label>
+				<input type="text" class="city" required>
 
-			<button type="submit">Submit Form</button>
+				<button type="submit" id="submit">Submit Form</button>
+			</form>
+
+			<div class="dialog-wrap">
+				<dialog>
+					<div><span class="label">Name:</span><span class="dialog-name info"></span></div>
+					<div><span class="label">Address:</span><span class="dialog-address info"></span></div>
+					<div><span class="label">City:</span><span class="dialog-city info"></span></div>
+					<div><button class="close">Close</button></div>
+				</dialog>
+			</div>
 	</footer>
 	<script src="script.js"></script>
 </body>
