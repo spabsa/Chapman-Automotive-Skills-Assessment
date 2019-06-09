@@ -9,9 +9,9 @@ body {
 	color: #63889b;
 }
 
-* {
+/** {
 	outline: 1px solid red;
-}
+}*/
 
 /*------NAV-----*/
 
@@ -37,6 +37,8 @@ nav {
 
 .brand {
 	margin-left: 6%;
+	position: relative;
+	z-index: 5;
 }
 
 .logo {
@@ -52,7 +54,7 @@ nav {
 
 .nav-links .link {
 	text-transform: uppercase;
-	margin-right: 20px;
+	margin-right: 16px;
 	cursor: pointer;
 	transition: all .2s ease;
 }
@@ -61,24 +63,28 @@ nav {
 	color: #014263;
 }
 
+.ham-menu {
+	display: none;
+}
+
 /*-----HEADER-----*/
 
 header {
-	margin-top: 92px;
 	background-image: url(img/canada.jpeg);
 	background-position: center;
 	background-size: cover;
-	padding-top: 7%;
-	padding-bottom: 25%;
+	height: 80vh;
+	margin-top: 92px;
 }
 
 .header-info {
+	display: inline-block;
 	color: #fff;
-	font-size: 1.5rem;
-	width: 423px;
+	font-size: 1.8rem;
 	background-color: rgba(0,0,0,0.6);
 	padding: 35px;
 	margin-left: 10%;
+	margin-top: 4%;
 }
 
 header p {
@@ -151,42 +157,34 @@ footer {
 	display: flex;
 	justify-content: space-between;
 	color: #fff;
-	padding-bottom: 30px;
-}
-
-.internal-links {
-	padding-left: 15%;
-	font-size: 1.5rem;
-}
-
-.links div {
-	margin:2px 0;
-	cursor: pointer;
+	padding: 30px 100px 30px 100px;
 }
 
 .internal-links h4 {
 	text-decoration: underline;
+	font-size: 1.5rem;
 	text-align: center;
+	margin-top: 0;
 	margin-bottom: 8px;
-	margin-top: 30PX;
 	color: #fff;
 }
 
-.links {
-	font-size: 1.2rem; 
+.links div {
+	font-size: 1.2rem;
+	margin:2px 0;
+	cursor: pointer;
 	display: flex;
 	flex-direction: column;
 }
 
+
 .form-wrap {
-	padding-top: 30px;
 	display: flex;
 	align-items: flex-end;
 	flex-basis: 50%;
 }
 
 form {
-	margin: 0 100px 0 0;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
@@ -208,7 +206,7 @@ button {
 	border: 1px solid #fff;
 	width: 50%;
 	font-size: 1.3rem;
-	background-color: #1090d1;
+	background-color: #4678c9;
 	align-self: flex-end;
 	color: #fff;
 	padding: 4px 30px;
@@ -232,7 +230,6 @@ dialog {
 	right: 0;
 	bottom: 0;
 	width: 500px;
-	height: 220px;
 	border: none;
 	display: flex;
 	flex-direction: column;
@@ -268,8 +265,10 @@ dialog .info {
 dialog button {
 	border: none;
 	width: 100%;
-	margin: auto auto 16px auto;
+	margin: auto;
 	padding: 7px;
+	position: relative;
+	top: 10px;
 }
 
 dialog button:hover {
@@ -283,6 +282,9 @@ dialog div:last-child {
 }
 
 @media screen and (max-width: 1600px) {
+
+	/*-----HEADER-----*/
+
 	.header-info {
 	font-size: 1.4rem;
 	width: 392px;
@@ -291,20 +293,44 @@ dialog div:last-child {
 }
 
 @media screen and (max-width: 1400px) {
+
+	/*-----HEADER-----*/
+
+	header {
+		height: 70vh;
+	}
+
+	/*-----MAIN-----*/
+
 	.col p, .links {
 		font-size: 1.1rem;
 	}
 }
 
 @media screen and (max-width: 1200px) {
+
+	/*-----NAV-----*/
+
 	nav {
 		font-size: 1.5rem;
 	}
+
+	.brand {
+	    margin-left: 3%;
+	}
+
+	.nav-links {
+	    margin-right: 3%;
+	}
+
+	/*-----HEADER-----*/
 
 	.header-info {
 		font-size: 1.3rem;
 		width: 363px;
 	}
+
+	/*-----MAIN-----*/
 
 	.col-1 img {
 		width: 270px;
@@ -321,12 +347,15 @@ dialog div:last-child {
 		height: 140px;
 	}
 
-	.col p, .links, label {
+	.col p, .links div, label {
 		font-size: 1rem;
 	}
 }
 
 @media screen and (max-width: 1000px) {
+
+	/*-----MAIN-----*/
+
 	.col p {
 		width: 85%;
 	}
@@ -337,7 +366,7 @@ dialog div:last-child {
 	}
 
 	.col-2 img {
-		width: 220px;
+		width: 190px;
    		height: 82px;
 	}
 
@@ -345,10 +374,344 @@ dialog div:last-child {
 		width: 210px;
     	height: 120px;
 	}
+
+	/*-----FOOTER-----*/
+
+	button {
+		font-size: 1.1rem;
+	}
+
+	dialog div {
+    	font-size: 1.2rem;
+	}
 }
 
 @media screen and (max-width: 900px) {
+
+	/*-----NAV-----*/
+
+	nav {
+	    font-size: 1.4rem;
+	}
+
+	/*-----HEADER-----*/
+
 	.header-info {
 		font-size: 1.1rem;
+		padding: 25px;
+		width: 308px
+	}
+
+
+	header {
+		height: 60vh;
+	}
+}
+
+@media screen and (max-width: 850px) {
+
+	/*-----FOOTER-----*/
+
+    input {
+	    font-size: 1.3rem;
+	}
+
+	footer {
+		padding: 30px 70px 30px 70px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+
+	/*-----MAIN-----*/
+
+	main {
+		padding: 0 10px;
+	}
+
+	.col-1 img {
+	    width: 190px;
+	    height: 92px;
+	}
+
+	.col-3 img {
+	    width: 170px;
+	    height: 100px;
+	}
+
+	.col-2 {
+		padding-top: 30px;
+	}
+
+	.col {
+		    margin: 0 10px;
+	}
+	
+	.col p {
+		width: 100%;
+	}
+
+	/*-----FOOTER-----*/
+
+	footer {
+		margin-top: -20px;
+	}
+
+	button {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 765px) {
+
+	/*-----FOOTER-----*/
+
+	.col p, .links, label {
+	    font-size: 0.9rem;
+	}
+
+	dialog {
+		width: 400px;
+	}
+}
+
+@media screen and (max-width: 728px) {
+
+	/*-----NAV-----*/
+
+	nav {
+    	font-size: 1.2rem;
+	}
+
+	/*-----FOOTER-----*/
+
+	.internal-links h4 {
+	    font-size: 1.3rem; 
+	}
+}
+
+@media screen and (max-width: 650px) {
+
+	/*-----MAIN-----*/
+
+	.col-1 img {
+	    width: 160px;
+	    height: 80px;
+	}
+
+	.col-2 img {
+	    width: 170px;
+	    height: 70px;
+	}
+
+	.col-3 img {
+	    width: 140px;
+	    height: 87px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+
+	/*-----HEADER-----*/
+
+    .comp-name {
+    	position: relative;
+    	right: 15px;
+    }
+
+    .nav-links .link {
+    	margin-right: 0;
+    	margin-left: 16px;
+    }
+
+	/*-----MAIN-----*/
+
+	main {
+		flex-direction: column;
+	}
+
+	.col-1 img {
+	    width: 230px;
+	    height: 112px;
+	}
+
+	.col-2 img, .col-2 h3, .col-2 p {
+	    position: static;
+	}
+
+	.col-2 img {
+	    width: 280px;
+	    height: 119px;
+	}
+
+	.col-3 img {
+	    width: 210px;
+	    height: 120px;
+	}
+
+	.col {
+		padding: 30px 0 20px 0;
+	}
+
+	.col p {
+	    width: 90%;
+	}
+
+	/*------FOOTER-----*/
+
+	button {
+    	font-size: 1rem;
+    }
+
+	footer {
+		margin-top: 0;
+	}
+}
+
+@media screen and (max-width: 550px) {
+
+	/*------NAV-----*/
+
+	nav {
+		padding: 15px 0;
+	}
+
+	.logo {
+		max-width: 60px;
+	}
+
+	.ham-menu {
+		display: flex;
+		flex-direction: column;
+		margin-right: 3%;
+		cursor: pointer;
+	}
+
+	.nav-links {
+		display: none;
+	}
+
+	.b1, .b2, .b3 {
+		width: 45px;
+		height: 5px;
+		margin: auto;
+		background-color: #4678c9;
+		position: relative;
+		transition: all .2s ease;
+	}
+
+	.ham-open .nav-links {
+		display: flex;
+		position: fixed;
+	    left: 0;
+	    right: 0;
+	    top: 0;
+	    bottom: 0;
+	    flex-direction: column;
+	    background-color: rgba(0,0,0,0.5);
+	    margin: 0;
+	    padding: 100px 0;
+	}
+
+	.ham-open .nav-links .link {
+		font-size: 2.2rem;
+		margin: auto;
+		color: #fff;
+	}
+
+	.ham-open .comp-name {
+		color: #fff;
+	}
+
+	.ham-open .b1 {
+		background-color: #fff;
+		transform: rotate(45deg) translate(8px, 8px);
+	}
+
+	.ham-open .b2 {
+	    opacity: 0;
+	}
+
+	.ham-open .b3 {
+		background-color: #fff;
+		transform: rotate(-45deg) translate(9px, -9px);;
+	}
+
+	/*-----HEADER-----*/
+
+	header {
+		margin-top: 66px;
+	}
+
+	.header-info {
+		display: block;
+		position: relative;
+		top: 40px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	/*-----FOOTER-----*/
+
+	footer {
+	    padding: 30px 40px 30px; 
+	}
+
+@media screen and (max-width: 500px) {
+
+	/*-----FOOTER-----*/
+
+	.internal-links h4 {
+	    font-size: 1.1rem;
+	}
+
+	.links div, label {
+	    font-size: 15px;
+	}
+
+	button {
+	    margin-top: 8px;
+	}
+
+	footer {
+	    padding: 20px 30px 20px;
+	}
+
+	dialog {
+	    width: 340px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+
+	/*-----FOOTER-----*/
+
+	footer {
+		flex-direction: column;
+	}
+
+	.internal-links {
+		margin-bottom: 30px;
+	}
+
+	.links {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	
+	/*-----HEADER-----*/
+
+	.header-info {
+		font-size: 15px;
+		padding: 15px;
+		width: 262px;
+	}
+
+	/*------FOOTER-----*/
+
+	dialog {
+	    width: 270px; 
 	}
 }

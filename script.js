@@ -1,8 +1,9 @@
 const navLinks = document.querySelectorAll('.nav-links .link');
 const linksArray = Array.from(document.querySelectorAll('.links div'));
 const header = document.querySelector('header');
-const submit = document.querySelector('#submit');
-
+const form = document.querySelector('form');
+const hamMenu = document.querySelector('.ham-menu');
+let hasColor = false;
 
 for (var i = 0; i < navLinks.length; i++) {
 	navLinks[i].addEventListener('click', changeColor);
@@ -21,12 +22,16 @@ function changeColor() {
 		hexColor += hexArray[random];
 	}
 
-	header.style.backgroundImage = 'none';
-	header.style.backgroundColor = hexColor;
+	if(!hasColor) {
+		hasColor = true;
+		header.style.backgroundImage = 'none';
+		header.style.backgroundColor = hexColor;
 
-	setTimeout(function() {
-		header.style.backgroundImage = 'url(img/canada.jpeg)';
-	}, 2000);
+		setTimeout(function() {
+			hasColor = false;
+			header.style.backgroundImage = 'url(img/canada.jpeg)';
+		}, 2000);
+	}
 }
 
 function shuffle() { //  Fisher-Yates shuffle algorithm
@@ -36,7 +41,7 @@ function shuffle() { //  Fisher-Yates shuffle algorithm
   }
 }
 
-submit.addEventListener('click', (e) => {
+form.addEventListener('submit', (e) => {
 	e.preventDefault();
 	const name = document.querySelector('.name').value;
 	const address = document.querySelector('.address').value;
@@ -55,5 +60,9 @@ submit.addEventListener('click', (e) => {
 	
 })
 
+hamMenu.addEventListener('click', () => {
+	const nav = document.querySelector('nav');
+	nav.classList.toggle('ham-open');
+})
 
 
