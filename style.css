@@ -219,18 +219,19 @@ button {
     height: 100%;
     top: 0px;
     left: 0px;
-    z-index: 5;
+    z-index: 15;
     display: none;
 }
 
 dialog {
 	position: fixed;
-	background: #fff;
+	background-color: #fff;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	width: 500px;
+	height: 228px;
 	border: none;
 	display: flex;
 	flex-direction: column;
@@ -380,6 +381,10 @@ dialog div:last-child {
 
 	button {
 		font-size: 1.1rem;
+	}
+
+	dialog {
+		height: 213px;
 	}
 
 	dialog div {
