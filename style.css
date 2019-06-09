@@ -224,12 +224,14 @@ button {
 }
 
 dialog {
+	padding: 1em;
 	position: fixed;
 	background-color: #fff;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
+	margin: auto;
 	width: 500px;
 	height: 228px;
 	border: none;
